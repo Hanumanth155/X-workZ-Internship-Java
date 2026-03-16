@@ -1,12 +1,11 @@
-
-class Coffee{
+class FoodStreet{
 
    String name;
    String type;
    int value;
    String note;
 
-   public void getCoffeeDetails(){
+   public void getFoodStreetDetails(){
        System.out.println("The name is: " + name);
        System.out.println("The type is: " + type);
        System.out.println("The value is: " + value);
