@@ -11,56 +11,59 @@ class PVR {
     String managerName;
     int parkingCapacity;
     boolean servesAlcohol;
+    String openingTime;
+    String closingTime;
+    boolean hasRecliners;
+    double foodRevenue;
+    int totalEmployees;
+    short yearOpened;
+    boolean has3D;
+    String contactNumber;
 
-    public PVR(String location) {
+    public PVR(String location, boolean hasIMAX, int screenCount, double ticketPrice, float rating, long dailyVisitors, short seatingCapacity, byte premiumLounges, char cinemaGrade, String managerName, int parkingCapacity, boolean servesAlcohol, String openingTime, String closingTime, boolean hasRecliners, double foodRevenue, int totalEmployees, short yearOpened, boolean has3D, String contactNumber) {
         this.location = location;
-    }
-
-    public PVR(boolean hasIMAX) {
         this.hasIMAX = hasIMAX;
-    }
-
-    public PVR(int screenCount) {
         this.screenCount = screenCount;
-    }
-
-    public PVR(double ticketPrice) {
         this.ticketPrice = ticketPrice;
-    }
-
-    public PVR(float rating) {
         this.rating = rating;
-    }
-
-    public PVR(long dailyVisitors) {
         this.dailyVisitors = dailyVisitors;
-    }
-
-    public PVR(short seatingCapacity) {
         this.seatingCapacity = seatingCapacity;
-    }
-
-    public PVR(byte premiumLounges) {
         this.premiumLounges = premiumLounges;
-    }
-
-    public PVR(char cinemaGrade) {
         this.cinemaGrade = cinemaGrade;
-    }
-
-    public PVR(String location, String managerName) {
-        this.location = location;
         this.managerName = managerName;
-    }
-
-    public PVR(int screenCount, int parkingCapacity) {
-        this.screenCount = screenCount;
         this.parkingCapacity = parkingCapacity;
+        this.servesAlcohol = servesAlcohol;
+        this.openingTime = openingTime;
+        this.closingTime = closingTime;
+        this.hasRecliners = hasRecliners;
+        this.foodRevenue = foodRevenue;
+        this.totalEmployees = totalEmployees;
+        this.yearOpened = yearOpened;
+        this.has3D = has3D;
+        this.contactNumber = contactNumber;
     }
 
-    public PVR(boolean hasIMAX, boolean servesAlcohol) {
-        this.hasIMAX = hasIMAX;
-        this.servesAlcohol = servesAlcohol;
+    public void display() {
+        System.out.println("Location: " + this.location);
+        System.out.println("Has IMAX: " + this.hasIMAX);
+        System.out.println("Screen Count: " + this.screenCount);
+        System.out.println("Ticket Price: Rs " + this.ticketPrice);
+        System.out.println("Rating: " + this.rating);
+        System.out.println("Daily Visitors: " + this.dailyVisitors);
+        System.out.println("Seating Capacity: " + this.seatingCapacity);
+        System.out.println("Premium Lounges: " + this.premiumLounges);
+        System.out.println("Cinema Grade: " + this.cinemaGrade);
+        System.out.println("Manager Name: " + this.managerName);
+        System.out.println("Parking Capacity: " + this.parkingCapacity);
+        System.out.println("Serves Alcohol: " + this.servesAlcohol);
+        System.out.println("Opening Time: " + this.openingTime);
+        System.out.println("Closing Time: " + this.closingTime);
+        System.out.println("Has Recliners: " + this.hasRecliners);
+        System.out.println("Food Revenue: Rs " + this.foodRevenue);
+        System.out.println("Total Employees: " + this.totalEmployees);
+        System.out.println("Year Opened: " + this.yearOpened);
+        System.out.println("Has 3D: " + this.has3D);
+        System.out.println("Contact Number: " + this.contactNumber);
+        System.out.println();
     }
 }
-

@@ -1,42 +1,27 @@
 class CellRunner {
     public static void main(String[] args) {
+        
+		Cell c1 = new Cell("Neuron", true, 30000, 100.0, 0.0f, 1000000L, (short)2000, (byte)23, 'S', "Signal Transmission", true, 5000, 10.5, 75.0f, 101L, (short)5000, (byte)2, 'L', true, "1837");
+        
+		Cell c2 = new Cell("Red Blood Cell", false, 120, 7.5, 0.0f, 500000L, (short)0, (byte)0, 'D', "Oxygen Transport", true, 100, 2.0, 65.0f, 102L, (short)0, (byte)1, 'S', false, "1658");
+        
+		Cell c3 = new Cell("Skin Cell", true, 21, 30.0, 24.0f, 200000L, (short)300, (byte)23, 'F', "Protection", true, 800, 5.0, 70.0f, 103L, (short)1000, (byte)2, 'M', true, "1665");
+        
+		Cell c4 = new Cell("Muscle Cell", true, 5000, 50.0, 0.0f, 800000L, (short)5000, (byte)23, 'C', "Movement", true, 10000, 15.0, 78.0f, 104L, (short)8000, (byte)2, 'L', true, "1840");
+        
+		Cell c5 = new Cell("Sperm Cell", true, 5, 5.0, 0.0f, 50000L, (short)50, (byte)23, 'T', "Reproduction", true, 2000, 1.0, 60.0f, 105L, (short)100, (byte)1, 'X', false, "1677");
+        
+		Cell c6 = new Cell("Stem Cell", true, 365, 20.0, 12.0f, 150000L, (short)400, (byte)23, 'R', "Differentiation", true, 1200, 8.0, 72.0f, 106L, (short)2000, (byte)2, 'M', true, "1963");
+        
+		Cell c7 = new Cell("Bacteria", false, 2, 2.0, 0.5f, 10000L, (short)0, (byte)1, 'B', "Survival", false, 50, 0.5, 80.0f, 107L, (short)50, (byte)3, 'X', true, "1676");
+        
+		Cell c8 = new Cell("Adipose Cell", true, 3650, 100.0, 0.0f, 400000L, (short)200, (byte)23, 'G', "Fat Storage", true, 400, 3.0, 15.0f, 108L, (short)500, (byte)2, 'L', true, "1850");
+        
+		Cell c9 = new Cell("Osteoblast", true, 90, 40.0, 48.0f, 250000L, (short)600, (byte)23, 'I', "Bone Formation", true, 1500, 12.0, 50.0f, 109L, (short)3000, (byte)2, 'M', true, "1853");
+        
+		Cell c10 = new Cell("Hepatocyte", true, 150, 35.0, 72.0f, 350000L, (short)1500, (byte)23, 'P', "Metabolism", true, 3000, 20.0, 75.0f, 110L, (short)5000, (byte)2, 'L', true, "1833");
 
-        System.out.println("\n");
-
-        Cell c1 = new Cell("Red Blood Cell");
-        System.out.println("1. The specific classification of this cell is " + c1.type + ".");
-
-        Cell c2 = new Cell(false);
-        System.out.println("2. Does this mature cell contain a nucleus? " + c2.hasNucleus + ".");
-
-        Cell c3 = new Cell(120);
-        System.out.println("3. The average biological lifespan of this cell is " + c3.lifespanDays + " days.");
-
-        Cell c4 = new Cell(7.5);
-        System.out.println("4. The measured physical diameter is " + c4.diameterMicrometers + " micrometers.");
-
-        Cell c5 = new Cell(24.0f);
-        System.out.println("5. The cell undergoes mitosis division roughly every " + c5.divisionRateHours + " hours.");
-
-        Cell c6 = new Cell(250000000L);
-        System.out.println("6. A single cell can contain " + c6.moleculesCount + " complex molecules.");
-
-        Cell c7 = new Cell((short)2000);
-        System.out.println("7. This highly active cell contains " + c7.mitochondriaCount + " energy-producing mitochondria.");
-
-        Cell c8 = new Cell((byte)23);
-        System.out.println("8. The nucleus contains exactly " + c8.chromosomePairs + " pairs of chromosomes.");
-
-        Cell c9 = new Cell('D');
-        System.out.println("9. The physical morphology falls into shape category '" + c9.shapeCategory + "'.");
-
-        Cell c10 = new Cell("Neuron", "Signal Transmission");
-        System.out.println("10. The " + c10.type + " is primarily responsible for " + c10.function + ".");
-
-        Cell c11 = new Cell(true, true);
-        System.out.println("11. Has nucleus: " + c11.hasNucleus + ". Is it classified as a eukaryotic cell? " + c11.isEukaryotic + ".");
-
-        Cell c12 = new Cell(30, 1000000);
-        System.out.println("12. With a lifespan of " + c12.lifespanDays + " days, it generates " + c12.energyAtpProduced + " ATP units of energy per cycle.");
+        c1.display(); c2.display(); c3.display(); c4.display(); c5.display();
+        c6.display(); c7.display(); c8.display(); c9.display(); c10.display();
     }
 }

@@ -1,66 +1,52 @@
 class Education {
     String institutionName;
-    boolean isPublic;
+    String level;
     int studentCount;
+    boolean isPublic;
     double annualTuition;
     float graduationRate;
-    long endowmentFund;
-    short foundingYear;
-    byte ranking;
-    char accreditationGrade;
-    String stateLocation;
-    int staffCount;
-    boolean offersOnline;
+    long endowment;
+    char accreditation;
+    String location;
+    short staffCount;
+    byte worldRanking;
+    int foundedYear;
+    boolean hasOnlineCourses;
+    char sizeCategory;
+    double averageGPA;
+    long booksInLibrary;
+    boolean isCoed;
+    String primaryLanguage;
+    float researchFundingMillions;
+    byte collegeCount;
 
-    public Education(String institutionName) {
+    public Education(String institutionName, String level, int studentCount, boolean isPublic, double annualTuition, float graduationRate, long endowment, char accreditation, String location, short staffCount, byte worldRanking, int foundedYear, boolean hasOnlineCourses, char sizeCategory, double averageGPA, long booksInLibrary, boolean isCoed, String primaryLanguage, float researchFundingMillions, byte collegeCount) {
         this.institutionName = institutionName;
-    }
-
-    public Education(boolean isPublic) {
-        this.isPublic = isPublic;
-    }
-
-    public Education(int studentCount) {
+        this.level = level;
         this.studentCount = studentCount;
-    }
-
-    public Education(double annualTuition) {
+        this.isPublic = isPublic;
         this.annualTuition = annualTuition;
-    }
-
-    public Education(float graduationRate) {
         this.graduationRate = graduationRate;
-    }
-
-    public Education(long endowmentFund) {
-        this.endowmentFund = endowmentFund;
-    }
-
-    public Education(short foundingYear) {
-        this.foundingYear = foundingYear;
-    }
-
-    public Education(byte ranking) {
-        this.ranking = ranking;
-    }
-
-    public Education(char accreditationGrade) {
-        this.accreditationGrade = accreditationGrade;
-    }
-
-    public Education(String institutionName, String stateLocation) {
-        this.institutionName = institutionName;
-        this.stateLocation = stateLocation;
-    }
-
-    public Education(int studentCount, int staffCount) {
-        this.studentCount = studentCount;
+        this.endowment = endowment;
+        this.accreditation = accreditation;
+        this.location = location;
         this.staffCount = staffCount;
+        this.worldRanking = worldRanking;
+        this.foundedYear = foundedYear;
+        this.hasOnlineCourses = hasOnlineCourses;
+        this.sizeCategory = sizeCategory;
+        this.averageGPA = averageGPA;
+        this.booksInLibrary = booksInLibrary;
+        this.isCoed = isCoed;
+        this.primaryLanguage = primaryLanguage;
+        this.researchFundingMillions = researchFundingMillions;
+        this.collegeCount = collegeCount;
     }
 
-    public Education(boolean isPublic, boolean offersOnline) {
-        this.isPublic = isPublic;
-        this.offersOnline = offersOnline;
+    public void display() {
+        System.out.println("Institution: " + institutionName + " | Level: " + level + " | Students: " + studentCount);
+        System.out.println("Public: " + isPublic + " | Tuition: $" + annualTuition + " | Grad Rate: " + graduationRate + "%");
+        System.out.println("Ranking: " + worldRanking + " | Founded: " + foundedYear + " | Online: " + hasOnlineCourses);
+        System.out.println();
     }
 }
-

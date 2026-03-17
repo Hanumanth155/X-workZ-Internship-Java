@@ -2,73 +2,68 @@ class Shampoo {
     String brand;
     boolean isSulfateFree;
     int volumeMl;
-    double price;
+    double priceUsd;
     float phLevel;
     long barcode;
     short shelfLifeMonths;
     byte rating;
     char hairType;
     String scent;
-    int bottlesSold;
+    String mainIngredient;
     boolean isVegan;
-    String targetAudience;
     double weightGrams;
-    float concentration;
+    float concentrationPercent;
+    int bottlesSold;
     long batchNumber;
     short restockDays;
     byte foamLevel;
-    char sizeCategory;
-    boolean isAntiDandruff;
+    char bottleSizeCode;
+    String targetAudience;
 
-    public Shampoo(String brand) {
+    public Shampoo(String brand, boolean isSulfateFree, int volumeMl, double priceUsd, float phLevel, long barcode, short shelfLifeMonths, byte rating, char hairType, String scent, String mainIngredient, boolean isVegan, double weightGrams, float concentrationPercent, int bottlesSold, long batchNumber, short restockDays, byte foamLevel, char bottleSizeCode, String targetAudience) {
         this.brand = brand;
-    }
-
-    public Shampoo(boolean isSulfateFree) {
         this.isSulfateFree = isSulfateFree;
-    }
-
-    public Shampoo(int volumeMl) {
         this.volumeMl = volumeMl;
-    }
-
-    public Shampoo(double price) {
-        this.price = price;
-    }
-
-    public Shampoo(float phLevel) {
+        this.priceUsd = priceUsd;
         this.phLevel = phLevel;
-    }
-
-    public Shampoo(long barcode) {
         this.barcode = barcode;
-    }
-
-    public Shampoo(short shelfLifeMonths) {
         this.shelfLifeMonths = shelfLifeMonths;
-    }
-
-    public Shampoo(byte rating) {
         this.rating = rating;
-    }
-
-    public Shampoo(char hairType) {
         this.hairType = hairType;
-    }
-
-    public Shampoo(String brand, String scent) {
-        this.brand = brand;
         this.scent = scent;
-    }
-
-    public Shampoo(int volumeMl, int bottlesSold) {
-        this.volumeMl = volumeMl;
-        this.bottlesSold = bottlesSold;
-    }
-
-    public Shampoo(boolean isSulfateFree, boolean isVegan) {
-        this.isSulfateFree = isSulfateFree;
+        this.mainIngredient = mainIngredient;
         this.isVegan = isVegan;
+        this.weightGrams = weightGrams;
+        this.concentrationPercent = concentrationPercent;
+        this.bottlesSold = bottlesSold;
+        this.batchNumber = batchNumber;
+        this.restockDays = restockDays;
+        this.foamLevel = foamLevel;
+        this.bottleSizeCode = bottleSizeCode;
+        this.targetAudience = targetAudience;
+    }
+
+    public void display() {
+        System.out.println("Brand: " + this.brand);
+        System.out.println("Sulfate Free: " + this.isSulfateFree);
+        System.out.println("Volume: " + this.volumeMl + " ml");
+        System.out.println("Price: $" + this.priceUsd);
+        System.out.println("pH Level: " + this.phLevel);
+        System.out.println("Barcode: " + this.barcode);
+        System.out.println("Shelf Life: " + this.shelfLifeMonths + " months");
+        System.out.println("Rating: " + this.rating);
+        System.out.println("Hair Type: " + this.hairType);
+        System.out.println("Scent: " + this.scent);
+        System.out.println("Main Ingredient: " + this.mainIngredient);
+        System.out.println("Vegan: " + this.isVegan);
+        System.out.println("Weight: " + this.weightGrams + " g");
+        System.out.println("Concentration: " + this.concentrationPercent + "%");
+        System.out.println("Bottles Sold: " + this.bottlesSold);
+        System.out.println("Batch Number: " + this.batchNumber);
+        System.out.println("Restock Days: " + this.restockDays);
+        System.out.println("Foam Level: " + this.foamLevel);
+        System.out.println("Size Code: " + this.bottleSizeCode);
+        System.out.println("Target Audience: " + this.targetAudience);
+        System.out.println();
     }
 }
-

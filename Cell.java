@@ -8,58 +8,45 @@ class Cell {
     short mitochondriaCount;
     byte chromosomePairs;
     char shapeCategory;
-    String function;
+    String primaryFunction;
     boolean isEukaryotic;
     int energyAtpProduced;
+    double proteinSynthesisRate;
+    float waterContentPercent;
+    long geneticMarkerId;
+    short ribosomeCount;
+    byte membraneLayers;
+    char sizeGrade;
+    boolean canSelfRepair;
+    String discoveryYear;
 
-    public Cell(String type) {
+    public Cell(String type, boolean hasNucleus, int lifespanDays, double diameterMicrometers, float divisionRateHours, long moleculesCount, short mitochondriaCount, byte chromosomePairs, char shapeCategory, String primaryFunction, boolean isEukaryotic, int energyAtpProduced, double proteinSynthesisRate, float waterContentPercent, long geneticMarkerId, short ribosomeCount, byte membraneLayers, char sizeGrade, boolean canSelfRepair, String discoveryYear) {
         this.type = type;
-    }
-
-    public Cell(boolean hasNucleus) {
         this.hasNucleus = hasNucleus;
-    }
-
-    public Cell(int lifespanDays) {
         this.lifespanDays = lifespanDays;
-    }
-
-    public Cell(double diameterMicrometers) {
         this.diameterMicrometers = diameterMicrometers;
-    }
-
-    public Cell(float divisionRateHours) {
         this.divisionRateHours = divisionRateHours;
-    }
-
-    public Cell(long moleculesCount) {
         this.moleculesCount = moleculesCount;
-    }
-
-    public Cell(short mitochondriaCount) {
         this.mitochondriaCount = mitochondriaCount;
-    }
-
-    public Cell(byte chromosomePairs) {
         this.chromosomePairs = chromosomePairs;
-    }
-
-    public Cell(char shapeCategory) {
         this.shapeCategory = shapeCategory;
-    }
-
-    public Cell(String type, String function) {
-        this.type = type;
-        this.function = function;
-    }
-
-    public Cell(boolean hasNucleus, boolean isEukaryotic) {
-        this.hasNucleus = hasNucleus;
+        this.primaryFunction = primaryFunction;
         this.isEukaryotic = isEukaryotic;
+        this.energyAtpProduced = energyAtpProduced;
+        this.proteinSynthesisRate = proteinSynthesisRate;
+        this.waterContentPercent = waterContentPercent;
+        this.geneticMarkerId = geneticMarkerId;
+        this.ribosomeCount = ribosomeCount;
+        this.membraneLayers = membraneLayers;
+        this.sizeGrade = sizeGrade;
+        this.canSelfRepair = canSelfRepair;
+        this.discoveryYear = discoveryYear;
     }
 
-    public Cell(int lifespanDays, int energyAtpProduced) {
-        this.lifespanDays = lifespanDays;
-        this.energyAtpProduced = energyAtpProduced;
+    public void display() {
+        System.out.println("Cell Type: " + type + " | Nucleus: " + hasNucleus + " | Life: " + lifespanDays + " days");
+        System.out.println("Function: " + primaryFunction + " | ATP: " + energyAtpProduced + " units");
+        System.out.println("Structure: " + shapeCategory + " | Eukaryotic: " + isEukaryotic + " | Repair: " + canSelfRepair);
+        System.out.println();
     }
 }
