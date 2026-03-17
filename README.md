@@ -1,1 +1,2 @@
-# X-workZ-Internship-Java
+# Xworkz-java
+This is my core Java works
