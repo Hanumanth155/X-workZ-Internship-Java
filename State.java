@@ -1,24 +1,44 @@
-class State {
-
-    private String highwayNames[] = new String[9];
+public class State {
+    public String highwayNames[] = new String[9];
     int index;
 
-    public boolean addHighwayName(String highwayName) {
-        boolean isHighwayAdded = false;
-
-        if (highwayName != null && !highwayName.isEmpty()) {
-            highwayNames[index] = highwayName;
-            index++;
-            isHighwayAdded = true;
-        } else {
-            System.out.println("Enter valid Highway Name");
-        }
-
-        return isHighwayAdded;
+    public boolean addHighway(String highway) {
+        boolean isAdded = false;
+        if (index < highwayNames.length) {
+            if (highway != null && !highway.isEmpty()) {
+                highwayNames[index++] = highway;
+                isAdded = true;
+            } else System.out.println(highway + " is invalid");
+        } else
+            System.out.println("highway index is full");
+        return isAdded;
     }
 
-    public void getHighwayNames() {
-        for (String highwayName : highwayNames)
-            System.out.println(highwayName);
+    public void getHighwayDetails() {
+        System.out.println("The highways are : \n");
+        for (String item : highwayNames)
+            if (item != null) System.out.println(item);
+    }
+
+    public String getHighwayByIndex(int index) {
+        String highway = null;
+        if (index < highwayNames.length)
+            highway = highwayNames[index];
+        else
+            System.out.println("Invalid index value: " + index);
+        return highway;
+    }
+
+    public int getIndexByHighway(String highway) {
+        int idx = 0;
+        if (highway != null) {
+            for (String item : highwayNames) {
+                if (item != null && item.equals(highway)) {
+                    return idx;
+                }
+                idx++;
+            }
+        } else System.out.println("highway name not found: " + highway);
+        return -1;
     }
 }

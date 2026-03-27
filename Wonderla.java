@@ -1,24 +1,44 @@
-class Wonderla {
-
-    private String waterGames[] = new String[20];
+public class Wonderla {
+    public String waterGames[] = new String[20];
     int index;
 
-    public boolean addWaterGame(String gameName) {
-        boolean isGameAdded = false;
-
-        if (gameName != null && !gameName.isEmpty()) {
-            waterGames[index] = gameName;
-            index++;
-            isGameAdded = true;
-        } else {
-            System.out.println("Enter valid Game Name");
-        }
-
-        return isGameAdded;
+    public boolean addWaterGame(String waterGame) {
+        boolean isAdded = false;
+        if (index < waterGames.length) {
+            if (waterGame != null && !waterGame.isEmpty()) {
+                waterGames[index++] = waterGame;
+                isAdded = true;
+            } else System.out.println(waterGame + " is invalid");
+        } else
+            System.out.println("waterGame index is full");
+        return isAdded;
     }
 
-    public void getWaterGames() {
-        for (String gameName : waterGames)
-            System.out.println(gameName);
+    public void getWaterGameDetails() {
+        System.out.println("The waterGames are : \n");
+        for (String item : waterGames)
+            if (item != null) System.out.println(item);
+    }
+
+    public String getWaterGameByIndex(int index) {
+        String waterGame = null;
+        if (index < waterGames.length)
+            waterGame = waterGames[index];
+        else
+            System.out.println("Invalid index value: " + index);
+        return waterGame;
+    }
+
+    public int getIndexByWaterGame(String waterGame) {
+        int idx = 0;
+        if (waterGame != null) {
+            for (String item : waterGames) {
+                if (item != null && item.equals(waterGame)) {
+                    return idx;
+                }
+                idx++;
+            }
+        } else System.out.println("waterGame name not found: " + waterGame);
+        return -1;
     }
 }
