@@ -1,11 +1,11 @@
-public class UserAccount{
+public class GitHubAccount{
 
    private int userId;
    private String firstName;
    private String lastName;
+   private String username;
    private String password;
    private String emailId;
-   private String gender;
    private long mobileNumber;
    
    public void setUserId(int userId){
@@ -32,6 +32,14 @@ public class UserAccount{
      return this.lastName;
    }
    
+   public void setUsername(String username){
+     this.username=username;
+   }
+   
+   public String getUsername(){
+     return this.username;
+   }
+   
    public void setPassword(String password){
      this.password=password;
    }
@@ -46,14 +54,6 @@ public class UserAccount{
    
    public String getEmailId(){
      return this.emailId;
-   }
-   
-   public void setGender(String gender){
-     this.gender=gender;
-   }
-   
-   public String getGender(){
-     return this.gender;
    }
    
    public void setMobileNumber(long mobileNumber){

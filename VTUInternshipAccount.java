@@ -1,11 +1,11 @@
-public class UserAccount{
+public class VTUInternshipAccount{
 
    private int userId;
    private String firstName;
    private String lastName;
-   private String password;
+   private String universitySeatNumber;
    private String emailId;
-   private String gender;
+   private String collegeName;
    private long mobileNumber;
    
    public void setUserId(int userId){
@@ -32,12 +32,12 @@ public class UserAccount{
      return this.lastName;
    }
    
-   public void setPassword(String password){
-     this.password=password;
+   public void setUniversitySeatNumber(String universitySeatNumber){
+     this.universitySeatNumber=universitySeatNumber;
    }
    
-   public String getPassword(){
-     return this.password;
+   public String getUniversitySeatNumber(){
+     return this.universitySeatNumber;
    }
    
    public void setEmailId(String emailId){
@@ -48,12 +48,12 @@ public class UserAccount{
      return this.emailId;
    }
    
-   public void setGender(String gender){
-     this.gender=gender;
+   public void setCollegeName(String collegeName){
+     this.collegeName=collegeName;
    }
    
-   public String getGender(){
-     return this.gender;
+   public String getCollegeName(){
+     return this.collegeName;
    }
    
    public void setMobileNumber(long mobileNumber){

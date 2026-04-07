@@ -1,11 +1,11 @@
-public class UserAccount{
+public class UdemyAccount{
 
    private int userId;
    private String firstName;
    private String lastName;
    private String password;
    private String emailId;
-   private String gender;
+   private String interestedCategory;
    private long mobileNumber;
    
    public void setUserId(int userId){
@@ -48,12 +48,12 @@ public class UserAccount{
      return this.emailId;
    }
    
-   public void setGender(String gender){
-     this.gender=gender;
+   public void setInterestedCategory(String interestedCategory){
+     this.interestedCategory=interestedCategory;
    }
    
-   public String getGender(){
-     return this.gender;
+   public String getInterestedCategory(){
+     return this.interestedCategory;
    }
    
    public void setMobileNumber(long mobileNumber){

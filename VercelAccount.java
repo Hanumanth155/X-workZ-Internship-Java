@@ -1,11 +1,11 @@
-public class UserAccount{
+public class VercelAccount{
 
    private int userId;
    private String firstName;
    private String lastName;
    private String password;
    private String emailId;
-   private String gender;
+   private String projectName;
    private long mobileNumber;
    
    public void setUserId(int userId){
@@ -48,12 +48,12 @@ public class UserAccount{
      return this.emailId;
    }
    
-   public void setGender(String gender){
-     this.gender=gender;
+   public void setProjectName(String projectName){
+     this.projectName=projectName;
    }
    
-   public String getGender(){
-     return this.gender;
+   public String getProjectName(){
+     return this.projectName;
    }
    
    public void setMobileNumber(long mobileNumber){

@@ -1,11 +1,11 @@
-public class UserAccount{
+public class DigiLockerAccount{
 
    private int userId;
    private String firstName;
    private String lastName;
    private String password;
    private String emailId;
-   private String gender;
+   private String aadhaarNumber;
    private long mobileNumber;
    
    public void setUserId(int userId){
@@ -48,12 +48,12 @@ public class UserAccount{
      return this.emailId;
    }
    
-   public void setGender(String gender){
-     this.gender=gender;
+   public void setAadhaarNumber(String aadhaarNumber){
+     this.aadhaarNumber=aadhaarNumber;
    }
    
-   public String getGender(){
-     return this.gender;
+   public String getAadhaarNumber(){
+     return this.aadhaarNumber;
    }
    
    public void setMobileNumber(long mobileNumber){
@@ -63,5 +63,4 @@ public class UserAccount{
    public long getMobileNumber(){
      return this.mobileNumber;
    }
-
 }

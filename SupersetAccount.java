@@ -1,11 +1,11 @@
-public class UserAccount{
+public class SupersetAccount{
 
    private int userId;
    private String firstName;
    private String lastName;
    private String password;
    private String emailId;
-   private String gender;
+   private String organizationName;
    private long mobileNumber;
    
    public void setUserId(int userId){
@@ -48,12 +48,12 @@ public class UserAccount{
      return this.emailId;
    }
    
-   public void setGender(String gender){
-     this.gender=gender;
+   public void setOrganizationName(String organizationName){
+     this.organizationName=organizationName;
    }
    
-   public String getGender(){
-     return this.gender;
+   public String getOrganizationName(){
+     return this.organizationName;
    }
    
    public void setMobileNumber(long mobileNumber){

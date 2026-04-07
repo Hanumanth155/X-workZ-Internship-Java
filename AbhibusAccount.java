@@ -1,11 +1,11 @@
-public class UserAccount{
+public class AbhibusAccount{
 
    private int userId;
    private String firstName;
    private String lastName;
    private String password;
    private String emailId;
-   private String gender;
+   private String source;
    private long mobileNumber;
    
    public void setUserId(int userId){
@@ -48,12 +48,12 @@ public class UserAccount{
      return this.emailId;
    }
    
-   public void setGender(String gender){
-     this.gender=gender;
+   public void setSource(String source){
+     this.source=source;
    }
    
-   public String getGender(){
-     return this.gender;
+   public String getSource(){
+     return this.source;
    }
    
    public void setMobileNumber(long mobileNumber){
@@ -63,5 +63,4 @@ public class UserAccount{
    public long getMobileNumber(){
      return this.mobileNumber;
    }
-
 }

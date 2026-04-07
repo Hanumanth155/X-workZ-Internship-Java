@@ -1,11 +1,11 @@
-public class UserAccount{
+public class LatexAccount{
 
    private int userId;
    private String firstName;
    private String lastName;
    private String password;
    private String emailId;
-   private String gender;
+   private String documentName;
    private long mobileNumber;
    
    public void setUserId(int userId){
@@ -48,12 +48,12 @@ public class UserAccount{
      return this.emailId;
    }
    
-   public void setGender(String gender){
-     this.gender=gender;
+   public void setDocumentName(String documentName){
+     this.documentName=documentName;
    }
    
-   public String getGender(){
-     return this.gender;
+   public String getDocumentName(){
+     return this.documentName;
    }
    
    public void setMobileNumber(long mobileNumber){
@@ -63,5 +63,4 @@ public class UserAccount{
    public long getMobileNumber(){
      return this.mobileNumber;
    }
-
 }

@@ -1,11 +1,11 @@
-public class UserAccount{
+public class PassportAccount{
 
    private int userId;
    private String firstName;
    private String lastName;
-   private String password;
-   private String emailId;
-   private String gender;
+   private String dateOfBirth;
+   private String address;
+   private String nationality;
    private long mobileNumber;
    
    public void setUserId(int userId){
@@ -32,28 +32,28 @@ public class UserAccount{
      return this.lastName;
    }
    
-   public void setPassword(String password){
-     this.password=password;
+   public void setDateOfBirth(String dateOfBirth){
+     this.dateOfBirth=dateOfBirth;
    }
    
-   public String getPassword(){
-     return this.password;
+   public String getDateOfBirth(){
+     return this.dateOfBirth;
    }
    
-   public void setEmailId(String emailId){
-     this.emailId=emailId;
+   public void setAddress(String address){
+     this.address=address;
    }
    
-   public String getEmailId(){
-     return this.emailId;
+   public String getAddress(){
+     return this.address;
    }
    
-   public void setGender(String gender){
-     this.gender=gender;
+   public void setNationality(String nationality){
+     this.nationality=nationality;
    }
    
-   public String getGender(){
-     return this.gender;
+   public String getNationality(){
+     return this.nationality;
    }
    
    public void setMobileNumber(long mobileNumber){
